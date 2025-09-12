@@ -1,0 +1,58 @@
+# C++ 编译输出文件
+*.o
+*.obj
+*.exe
+*.out
+*.app
+
+# 可执行文件 (无扩展名)
+Lab1-1
+Lab1-2
+Lab1-3
+Lab1-4
+Lab1-5
+outDebug
+
+# 调试信息文件
+*.dSYM/
+*.pdb
+*.ilk
+
+# 构建目录
+build/
+Debug/
+Release/
+bin/
+obj/
+
+# IDE 和编辑器文件
+.vscode/
+.vs/
+*.swp
+*.swo
+*~
+
+# macOS 系统文件
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# 临时文件
+*.tmp
+*.temp
+*.log
+
+# CMake 生成的文件
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# 压缩文件
+*.zip
+*.tar.gz
+*.rar
+
+# 备份文件
+*.bak
+*.backup

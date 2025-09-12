@@ -1,0 +1,30 @@
+# C++ compiled files
+*.o
+*.obj
+*.exe
+a.out
+outDebug
+outRelease
+
+# Debug symbols
+*.dSYM/
+*.pdb
+
+# Build directories
+build/
+Debug/
+Release/
+
+# IDE and system files
+.vscode/
+.DS_Store
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.temp
+
+# Log files
+*.log
