@@ -1,0 +1,19 @@
+# MacOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# C++ compiled files
+*.o
+*.out
+*.dSYM/
+*.exe
+
+# Specific executables
+01-quadratic
+02-polygon-area
+03-counter
+04-bin2dec
+05-distinct-numbers
+06-sum-matrix-col
