@@ -14,26 +14,20 @@ int main() {
     cin >> num;
 
     while (num != 0) {
-        if (num > 0) {
+        if (num > 0)
             countPositive++;
-        } else {
+        else
             countNegative++;
-        }
+        
         sum += num;
         totalCount++;
         cin >> num;
     }
- 
-    if (totalCount == 0){
-    cout << "No numbers are entered except 0";
-    return 0;
-    }
-   
-    cout << "The number of postives is " << countPositive << endl;
+
+    cout << "The number of positives is " << countPositive << endl;
     cout << "The number of negatives is " << countNegative << endl;
-    cout << "The total number of values is " << totalCount << endl;
     cout << "The total value is " << sum << endl;
-    cout << "The average value is " << (static_cast<double>(sum) / totalCount) << endl;
+    cout << "The average value is " << (totalCount == 0 ? 0.0 : static_cast<double>(sum) / totalCount) << endl;
 
 
     return 0;

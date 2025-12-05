@@ -31,6 +31,20 @@ class Rectangle2D {
     double width, height;
 
    public:
-    // WRITE YOUR CODE HERE. DO NOT CHANGE THE TEMPLATE
+    Rectangle2D();
+    Rectangle2D(double x, double y, double width, double height);
+    double getX() const;
+    void setX(double x);
+    double getY() const;
+    void setY(double y);
+    double getWidth() const;
+    void setWidth(double width);
+    double getHeight() const;
+    void setHeight(double height);
+    double getArea() const;
+    double getPerimeter() const;
+    bool contains(double x, double y) const;
+    bool contains(const Rectangle2D &r) const;
+    bool overlaps(const Rectangle2D &r) const;
     
 };

@@ -16,7 +16,14 @@
 class Rectangle {
    public:
 
-   // WRITE YOUR CODE HERE. DO NOT CHANGE THE TEMPLATE
+    Rectangle();
+    Rectangle(double width, double height);
+    double getWidth() const;
+    void setWidth(double width);
+    double getHeight() const;
+    void setHeight(double height);
+    double getArea() const;
+    double getPerimeter() const;
 
    private:
     double width, height;

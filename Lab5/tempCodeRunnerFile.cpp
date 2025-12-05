@@ -1,0 +1,1 @@
+    cout << "Approximation of Pi: " << (4.0 * static_cast<double>(in)) / static_cast<double>(all) << endl;

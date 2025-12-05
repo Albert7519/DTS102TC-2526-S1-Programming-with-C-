@@ -14,7 +14,8 @@ int main() {
     cout << "Enter the length of a side: ";
     cin >> s;
 
-    area = (n * s * s) / (4 * tan(M_PI / n));
+    const double PI = 3.14159;
+    area = (n * s * s) / (4 * tan(PI / n));
 
     cout << "The area of the polygon is " << area << endl;
 

@@ -1,0 +1,73 @@
+DTS102TC Programming with C++ Coursework 1 - Analysis Report
+
+Question 1. Algebra: solve quadratic equations
+
+Key Function Analysis:
+The core functionality is implemented within the main function, which solves quadratic equations of the form ax^2 + bx + c = 0. The program first reads the coefficients a, b, and c. The critical step is the calculation of the discriminant, d = b^2 - 4ac, which determines the nature of the roots.
+The program uses a conditional structure (if-else if-else) to handle three scenarios:
+1. If d > 0, the equation has two distinct real roots. These are calculated using the quadratic formula (-b +/- sqrt(d)) / 2a. The pow(d, 0.5) function is used to compute the square root.
+2. If d = 0, the equation has exactly one real root, calculated as -b / 2a.
+3. If d < 0, the equation has no real roots.
+This logic ensures all possible cases for real coefficients are handled correctly.
+
+Question 2. Geometry: area of a regular polygon
+
+Key Function Analysis:
+The program calculates the area of a regular polygon given the number of sides (n) and the side length (s). The mathematical formula used is Area = (n * s^2) / (4 * tan(PI / n)).
+The implementation defines PI as a constant double for precision. It utilizes the tan function from the <cmath> library. The expression (n * s * s) / (4 * tan(PI / n)) directly translates the mathematical formula into C++ code. The result is stored in a double variable to accommodate floating-point values.
+
+Question 3. Count positive and negative numbers and compute the average of numbers
+
+Key Function Analysis:
+The program analyzes a stream of integer inputs ending with 0. It employs a while loop that continues execution as long as the input is not 0 (the sentinel value).
+Inside the loop, conditional statements classify each number as positive or negative, incrementing the corresponding counters (countPositive, countNegative). Every non-zero number is added to a running sum.
+After the loop terminates, the average is calculated. A static_cast<double>(sum) is used to convert the integer sum to a floating-point number before division, ensuring the average is computed with decimal precision rather than performing integer division.
+
+Question 4. Convert binary to decimal
+
+Key Function Analysis:
+The function solve_bin_to_dec converts a binary string representation into a decimal integer. The algorithm iterates through the string from the last character (least significant bit) to the first (most significant bit).
+A variable 'power' tracks the place value of the current bit (1, 2, 4, 8, ...). In each iteration:
+1. If the current character is '1', the current 'power' value is added to the total decimal result.
+2. The 'power' is multiplied by 2 to prepare for the next bit position.
+This approach efficiently converts the binary number in a single pass without the overhead of repeated calls to a power function.
+
+Question 5. Distinct numbers
+
+Key Function Analysis:
+The program reads ten integers and filters out duplicates to display only distinct numbers. It utilizes an array 'numbers' to store the unique values identified so far and a counter 'size' to track the count of these unique values.
+For each new input, a nested loop performs a linear search through the 'numbers' array. A boolean flag 'isDistinct' is used to indicate if the number is already present. If the loop completes without finding the number, it is considered distinct, added to the array, and the size counter is incremented. This ensures that the output contains each number exactly once, preserving their original relative order.
+
+Question 6. Sum elements column by column
+
+Key Function Analysis:
+The function sumColumn computes the sum of elements in a specific column of a matrix. It accepts a 2D array, the number of rows, and the target column index as parameters.
+The logic involves a single for-loop that iterates through the rows (from 0 to rowSize - 1) while keeping the column index fixed. In each iteration, the value at the current row and specified column is added to an accumulator variable 'sum'. This effectively traverses the matrix vertically. The main function demonstrates this by calling sumColumn for each column index (0 to 3) of a 3x4 matrix.
+
+Question 7. The Rectangle class
+
+Key Function Analysis:
+The Rectangle class encapsulates the properties and behaviors of a geometric rectangle.
+1. Data Encapsulation: The width and height are stored as private double variables, ensuring they are modified only through defined interfaces.
+2. Constructors: A no-argument constructor initializes a default rectangle (1x1), while a parameterized constructor allows creating a rectangle with specific dimensions.
+3. Accessors: Public methods getWidth and getHeight provide read access to the private data.
+4. Computation: The getArea method returns the product of width and height, and getPerimeter returns 2 * (width + height). This design adheres to object-oriented principles by bundling data with the methods that operate on it.
+
+Question 8. The Rectangle2D class
+
+Key Function Analysis:
+The Rectangle2D class extends the rectangle concept to a 2D coordinate space, adding (x, y) coordinates for the center.
+1. Point Containment: The contains(double x, double y) method determines if a point lies inside the rectangle. It checks if the point's coordinates fall within the ranges [center_x - width/2, center_x + width/2] and [center_y - height/2, center_y + height/2].
+2. Rectangle Containment: The contains(const Rectangle2D &r) method checks if another rectangle 'r' is entirely within the current rectangle. This requires that all boundaries of 'r' are within the boundaries of the current rectangle.
+3. Overlap Detection: The overlaps(const Rectangle2D &r) method determines if two rectangles intersect. It uses the logic that two rectangles overlap unless they are completely separated (e.g., one is entirely to the left, right, above, or below the other).
+
+Question 9. The Bounding Rectangle
+
+Key Function Analysis:
+The getRectangle function calculates the minimum bounding rectangle that encloses a given set of 2D points.
+The algorithm iterates through the entire array of points to identify the extreme coordinates:
+- minX: the smallest x-coordinate
+- maxX: the largest x-coordinate
+- minY: the smallest y-coordinate
+- maxY: the largest y-coordinate
+These four values define the boundaries of the bounding box. The width is calculated as (maxX - minX) and the height as (maxY - minY). The center of the bounding rectangle is then derived as the midpoint of these ranges: (minX + width / 2, minY + height / 2). This efficiently determines the smallest axis-aligned rectangle containing all points.
